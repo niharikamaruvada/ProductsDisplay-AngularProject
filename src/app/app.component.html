@@ -1,0 +1,18 @@
+<div>
+
+  <nav>
+    Products
+    <a routerLink="/home">Home</a>
+
+    <a *ngIf="_isLoggedIn" (click)="logout()">Logout</a>
+    <a *ngIf="!_isLoggedIn" routerLink="/login">Login</a>
+
+  </nav>
+
+</div>
+
+<div *ngIf="_isLoggedIn">
+  Welcome {{name | async}}! Your email is {{email | async}}
+</div>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,20 @@
+<!-- <p>form-component works!</p> -->
+
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label>
+      Name:
+      <input #nameInput formControlName="name" placeholder="Your name" (change)="updateName(nameInput.value)">
+
+    </label>
+  </div>
+  <div>
+    <label>
+      Email:
+      <input #emailInput formControlName="email" placeholder="Your email" (change)="updateEmail(emailInput.value)">
+
+    </label>
+  </div>
+
+  <button type="submit" [disabled]="loginForm.invalid">Send</button>
+</form>
