@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import * as LoginActions from '../../nxjs/login.actions'; // Make sure the path is correct
+import * as LoginActions from '../../nxjs/login.actions'; 
 import { Store, select } from '@ngrx/store';
 import { LoginState } from '../../nxjs/login.reducer';
 import { selectEmail, selectName } from '../../nxjs/login.selectors';
